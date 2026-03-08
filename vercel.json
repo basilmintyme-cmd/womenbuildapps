@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/womenbuildapps",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/womenbuildapps/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    }
+  ]
+}

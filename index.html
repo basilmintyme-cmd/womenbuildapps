@@ -212,6 +212,22 @@
     </p>
   </footer>
   <script>
+    const githubPagesOrigin = 'https://basilmintyme-cmd.github.io';
+    const githubPagesBasePath = '/womenbuildapps';
+    // Update this if the final public Vercel domain differs from the default project domain.
+    const vercelOrigin = 'https://womenbuildapps.vercel.app';
+
+    if (
+      window.location.origin === githubPagesOrigin &&
+      (window.location.pathname === githubPagesBasePath ||
+        window.location.pathname.startsWith(`${githubPagesBasePath}/`))
+    ) {
+      const nextPath = window.location.pathname.slice(githubPagesBasePath.length) || '/';
+      window.location.replace(
+        `${vercelOrigin}${nextPath}${window.location.search}${window.location.hash}`
+      );
+    }
+
     function handleSignup(e) {
       e.preventDefault();
       const btn = e.target.querySelector('button');
