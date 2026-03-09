@@ -192,12 +192,8 @@
     <div class="signup-inner">
       <div class="section-label">Stay in the loop</div>
       <h2 class="signup-title">Ready to <em>build</em><br>with us?</h2>
-      <p class="signup-sub">Join our Discord community or drop your email to stay updated on events, demos, and community news.</p>
-      <form class="signup-form" onsubmit="handleSignup(event)">
-        <input type="email" placeholder="your@email.com" required id="emailInput" />
-        <button type="submit">Notify me</button>
-      </form>
-      <p class="signup-note">No spam. Just community updates. Unsubscribe anytime.</p>
+      <p class="signup-sub">Join our Discord community to stay updated on events, demos, and community news.</p>
+      <p class="signup-note">Email updates will open later once the WBA team decides who will monitor the inbox.</p>
       <div style="margin-top: 2rem;">
         <a href="https://discord.gg/pM2WZSV4" class="btn-primary" target="_blank">Join Discord Now →</a>
       </div>
@@ -235,6 +231,46 @@
       btn.style.background = 'linear-gradient(135deg, #4a9b6c, #6dcc96)';
       btn.disabled = true;
       document.getElementById('emailInput').disabled = true;
+    }
+    async function handleSignup(e) {
+      e.preventDefault();
+      const form = e.target;
+      const emailInput = document.getElementById('emailInput');
+      const status = document.getElementById('signupStatus');
+      const btn = form.querySelector('button');
+      const originalText = btn.textContent;
+      const email = emailInput.value.trim();
+
+      btn.textContent = 'Submitting...';
+      btn.disabled = true;
+      status.textContent = '';
+      status.style.color = 'var(--text-muted)';
+
+      try {
+        const response = await fetch('/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        const payload = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(payload.error || 'Signup failed. Please try again.');
+        }
+
+        btn.textContent = "You're on the list!";
+        btn.style.background = 'linear-gradient(135deg, #4a9b6c, #6dcc96)';
+        emailInput.disabled = true;
+        status.textContent = 'Check your inbox for a confirmation email.';
+      } catch (error) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        status.textContent = error.message || 'We could not save your email right now.';
+        status.style.color = '#ff9aa2';
+      }
     }
   </script>
 </body>
