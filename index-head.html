@@ -22,7 +22,7 @@
     body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--lavender); overflow-x: hidden; }
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 1.2rem 2.5rem; display: flex; align-items: center; justify-content: space-between;
+      padding: 0.65rem 2.5rem; display: flex; align-items: center; justify-content: space-between;
       background: rgba(14,8,24,0.88); backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
@@ -40,9 +40,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 118px;
-      height: 74px;
-      padding: 0.45rem;
+      width: 124px;
+      height: 124px;
+      padding: 0.42rem;
       border-radius: 22px;
       background: linear-gradient(145deg, rgba(60,35,108,0.92), rgba(24,14,40,0.98));
       border: 1px solid rgba(155,109,255,0.24);
@@ -60,16 +60,28 @@
       pointer-events: none;
       z-index: 0;
     }
-    .nav-logo img {
+    .nav-logo-plate {
       position: relative;
       z-index: 1;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      max-width: 100%;
-      height: auto;
+      height: 100%;
+      padding: 0.08rem;
       border-radius: 14px;
       background: #f7f3ff;
       box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+      overflow: hidden;
+    }
+    .nav-logo img {
+      display: block;
+      width: 164%;
+      max-width: none;
+      height: auto;
+      border-radius: 14px;
+      mix-blend-mode: multiply;
+      filter: saturate(1.02) contrast(1.04);
     }
     .nav-logo-copy {
       display: flex;
@@ -199,9 +211,9 @@
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .signup-form { flex-direction: column; }
       .signup-form input, .signup-form button { width: 100%; border-radius: 12px; }
-      nav { padding: 1rem 1.5rem; }
+      nav { padding: 0.58rem 1.5rem; }
       .nav-logo { gap: 0.7rem; }
-      .nav-logo-badge { width: 102px; height: 64px; padding: 0.38rem; border-radius: 19px; }
+      .nav-logo-badge { width: 106px; height: 106px; padding: 0.36rem; border-radius: 19px; }
       .nav-logo-badge::after { border-radius: 18px; }
       .nav-logo-copy small { font-size: 0.56rem; }
       .nav-logo-copy strong { font-size: 0.92rem; }
@@ -216,7 +228,9 @@
   <nav>
     <div class="nav-logo">
       <div class="nav-logo-badge">
-        <img src="https://media.discordapp.net/attachments/1479889071512883435/1480618237921067061/Gemini_Generated_Image_4095kn4095kn4095.png?ex=69b24ef0&amp;is=69b0fd70&amp;hm=c47e2c67a49b2b5b359dd5b392d8674b6204d29590aa314e6d95bf2ac4723ada&amp;=&amp;format=webp&amp;quality=lossless&amp;width=1333&amp;height=702" alt="Women Build Apps logo" />
+        <div class="nav-logo-plate">
+          <img src="https://media.discordapp.net/attachments/1479889071512883435/1480618237921067061/Gemini_Generated_Image_4095kn4095kn4095.png?ex=69b24ef0&amp;is=69b0fd70&amp;hm=c47e2c67a49b2b5b359dd5b392d8674b6204d29590aa314e6d95bf2ac4723ada&amp;=&amp;format=webp&amp;quality=lossless&amp;width=1333&amp;height=702" alt="Women Build Apps logo" />
+        </div>
       </div>
       <div class="nav-logo-copy">
         <small>Non-Profit Community</small>
