@@ -22,89 +22,12 @@
     body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--lavender); overflow-x: hidden; }
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0.45rem 2.5rem; display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 2.5rem; display: flex; align-items: center; justify-content: space-between;
       background: rgba(14,8,24,0.88); backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.9rem;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--lavender);
-    }
-    .nav-logo-badge {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 118px;
-      height: 92px;
-      padding: 0.38rem;
-      border-radius: 22px;
-      background: linear-gradient(145deg, rgba(60,35,108,0.92), rgba(24,14,40,0.98));
-      border: 1px solid rgba(155,109,255,0.24);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
-      overflow: hidden;
-      isolation: isolate;
-      flex-shrink: 0;
-    }
-    .nav-logo-badge::after {
-      content: '';
-      position: absolute;
-      inset: 1px;
-      border-radius: 21px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 48%);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .nav-logo-plate {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      padding: 0.08rem;
-      border-radius: 14px;
-      background: #f7f3ff;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.22);
-      overflow: hidden;
-    }
-    .nav-logo img {
-      display: block;
-      width: 164%;
-      max-width: none;
-      height: auto;
-      border-radius: 14px;
-      mix-blend-mode: multiply;
-      filter: saturate(1.02) contrast(1.04);
-    }
-    .nav-logo-copy {
-      display: flex;
-      flex-direction: column;
-      gap: 0.18rem;
-    }
-    .nav-logo-copy small {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .nav-logo-copy strong {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.08rem;
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      color: var(--lavender);
-    }
-    .nav-logo-copy strong span { background: linear-gradient(90deg, var(--purple-bright), var(--pink-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--lavender); }
+    .nav-logo span { background: linear-gradient(90deg, var(--purple-bright), var(--pink-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .nav-cta {
       background: linear-gradient(135deg, var(--purple-mid), var(--purple-bright));
       color: #fff; border: none; padding: 0.55rem 1.4rem; border-radius: 100px;
@@ -129,13 +52,9 @@
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: rgba(155,109,255,0.1); border: 1px solid rgba(155,109,255,0.3);
-      color: var(--purple-light); font-size: 0.74rem; font-weight: 500; padding: 0.34rem 1rem;
-      border-radius: 100px; margin-bottom: 1.15rem; letter-spacing: 0.01em; text-transform: none;
+      color: var(--purple-light); font-size: 0.78rem; font-weight: 500; padding: 0.4rem 1rem;
+      border-radius: 100px; margin-bottom: 2rem; letter-spacing: 0.06em; text-transform: uppercase;
       animation: fadeUp 0.6s ease both; position: relative;
-      justify-content: center; text-align: center; line-height: 1.25;
-      max-width: min(92vw, 620px);
-      white-space: normal;
-      margin-top: 1rem;
     }
     .hero-badge::before { content: '\2726'; font-size: 0.65rem; color: var(--pink-accent); }
     h1 {
@@ -215,33 +134,13 @@
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .signup-form { flex-direction: column; }
       .signup-form input, .signup-form button { width: 100%; border-radius: 12px; }
-      nav { padding: 0.42rem 1.5rem; }
-      .nav-logo { gap: 0.7rem; }
-      .nav-logo-badge { width: 100px; height: 78px; padding: 0.3rem; border-radius: 19px; }
-      .hero-badge { font-size: 0.7rem; padding: 0.32rem 0.8rem; max-width: min(94vw, 520px); }
-      .nav-logo-badge::after { border-radius: 18px; }
-      .nav-logo-copy small { font-size: 0.56rem; }
-      .nav-logo-copy strong { font-size: 0.92rem; }
-    }
-    @media (max-width: 560px) {
-      .nav-logo-copy small { display: none; }
-      .nav-logo-copy strong { font-size: 0.84rem; }
+      nav { padding: 1rem 1.5rem; }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="nav-logo">
-      <div class="nav-logo-badge">
-        <div class="nav-logo-plate">
-          <img src="https://media.discordapp.net/attachments/1479889071512883435/1480618237921067061/Gemini_Generated_Image_4095kn4095kn4095.png?ex=69b24ef0&amp;is=69b0fd70&amp;hm=c47e2c67a49b2b5b359dd5b392d8674b6204d29590aa314e6d95bf2ac4723ada&amp;=&amp;format=webp&amp;quality=lossless&amp;width=1333&amp;height=702" alt="Women Build Apps logo" />
-        </div>
-      </div>
-      <div class="nav-logo-copy">
-        <small>Non-Profit Community</small>
-        <strong>Women <span>Build</span> Apps</strong>
-      </div>
-    </div>
+    <div class="nav-logo">Women <span>Build</span> Apps</div>
     <a href="https://discord.gg/pM2WZSV4" class="nav-cta" target="_blank">Join Discord &rarr;</a>
   </nav>
   <section class="hero">
