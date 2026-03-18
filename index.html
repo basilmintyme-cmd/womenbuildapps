@@ -244,14 +244,14 @@
         <strong>Women <span>Build</span> Apps</strong>
       </div>
     </div>
-    <a href="https://discord.gg/pM2WZSV4" class="nav-cta" target="_blank">Join Discord &rarr;</a>
+    <a href="https://discord.gg/uqdj6zxW" class="nav-cta" target="_blank">Join Discord &rarr;</a>
   </nav>
   <section class="hero">
-    <div class="hero-badge">Non-Profit Community &middot; Founded IWD 2026</div>
+    <div class="hero-badge">Non-Profit Community &middot; Founded IWD 2026 &middot; 22 members &amp; growing</div>
     <h1>Where women <em>build</em><br>real things together</h1>
     <p class="hero-sub">A remote, flexible community for women building apps &mdash; with AI coding agents, low-code, or no-code tools. No gatekeeping. No jargon. Just builders supporting builders.</p>
     <div class="hero-actions">
-      <a href="https://discord.gg/pM2WZSV4" class="btn-primary" target="_blank">Join the Community</a>
+      <a href="https://discord.gg/uqdj6zxW" class="btn-primary" target="_blank">Join the Community</a>
       <a href="#about" class="btn-secondary">Learn More</a>
     </div>
     <p class="hero-note">Free forever &middot; Remote &amp; flexible &middot; Open to all women builders</p>
@@ -279,15 +279,19 @@
     <div class="about-inner">
       <div>
         <div class="section-label">About the community</div>
-        <h2 class="about-title">A hobby club for the <em>new era</em> of building</h2>
-        <p class="about-text">We used to call it coding. Now, with AI tools, anyone can build. Women Build Apps is a non-profit community founded on that belief &mdash; that building apps is no longer just for traditional developers.</p>
-        <p class="about-text">Share what you're making, ask questions when you're stuck, mentor others when you have experience. Every woman who builds can host, speak, and demo.</p>
+        <h2 class="about-title">For the <em>building years</em> in between</h2>
+        <p class="about-text">We started on International Women's Day 2026 &mdash; not with a big launch, but with a quiet conviction.</p>
+        <p class="about-text">Too many communities for women in business are built around visibility, conferences, and in-person events. They reward the women who are already free to show up. But what about the women who aren&rsquo;t &mdash; yet?</p>
+        <p class="about-text">The women carrying unpaid caring responsibilities. Building in stolen hours. Living outside the London bubble. Working full-time while quietly growing something on the side.</p>
+        <p class="about-text">These women are not lacking ambition or capability. They are simply waiting for the right season of life. <strong style="color: var(--lavender);">WBA exists for the building years in between.</strong></p>
+        <p class="about-text">We&rsquo;re not trying to attract a big crowd. We&rsquo;re investing in the long game &mdash; because some of the most formidable builders we know are one life change away from being unstoppable.</p>
       </div>
       <div class="about-values">
         <div class="value-item"><div class="value-icon">&#10022;</div><div class="value-text"><h4>Non-profit, community-led</h4><p>No corporate agenda. Run by builders, for builders.</p></div></div>
         <div class="value-item"><div class="value-icon">&#127757;</div><div class="value-text"><h4>Remote &amp; flexible</h4><p>Join from anywhere. Participate on your own schedule.</p></div></div>
         <div class="value-item"><div class="value-icon">&#128682;</div><div class="value-text"><h4>No gatekeeping</h4><p>AI coding agents, low-code, no-code &mdash; all welcome here.</p></div></div>
         <div class="value-item"><div class="value-icon">&#128161;</div><div class="value-text"><h4>Build in public</h4><p>Share ideas, validate concepts, get honest feedback.</p></div></div>
+        <div class="value-item"><div class="value-icon">&#127807;</div><div class="value-text"><h4>Investing in the long game</h4><p>Some of the most formidable builders are one life change away from being unstoppable. We&rsquo;re here for them now.</p></div></div>
       </div>
     </div>
   </section>
@@ -298,14 +302,14 @@
       <p class="signup-sub">Join our Discord community to stay updated on events, demos, and community news.</p>
       <p class="signup-note">Email updates will open later once the WBA team decides who will monitor the inbox.</p>
       <div style="margin-top: 2rem;">
-        <a href="https://discord.gg/pM2WZSV4" class="btn-primary" target="_blank">Join Discord Now &rarr;</a>
+        <a href="https://discord.gg/uqdj6zxW" class="btn-primary" target="_blank">Join Discord Now &rarr;</a>
       </div>
     </div>
   </section>
   <footer>
     <p>&copy; 2026 Women Build Apps &middot; Non-Profit Community &middot; Founded on International Women's Day 2026</p>
     <p style="margin-top: 0.5rem;">
-      <a href="https://discord.gg/pM2WZSV4" target="_blank">Discord</a> &middot;
+      <a href="https://discord.gg/uqdj6zxW" target="_blank">Discord</a> &middot;
       <a href="https://www.linkedin.com/in/sarahliuit" target="_blank">LinkedIn</a> &middot;
       A community by <a href="https://www.basilmintyme.com" target="_blank">Sarah Liu</a>
     </p>
@@ -313,7 +317,6 @@
   <script>
     const githubPagesOrigin = 'https://basilmintyme-cmd.github.io';
     const githubPagesBasePath = '/womenbuildapps';
-    // Update this if the final public Vercel domain differs from the default project domain.
     const vercelOrigin = 'https://womenbuildapps.vercel.app';
 
     if (
@@ -327,14 +330,6 @@
       );
     }
 
-    function handleSignup(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button');
-      btn.textContent = "\u2713 You're on the list!";
-      btn.style.background = 'linear-gradient(135deg, #4a9b6c, #6dcc96)';
-      btn.disabled = true;
-      document.getElementById('emailInput').disabled = true;
-    }
     async function handleSignup(e) {
       e.preventDefault();
       const form = e.target;
